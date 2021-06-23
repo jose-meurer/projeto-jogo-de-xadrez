@@ -312,32 +312,7 @@ public class ChessMatch {
         }
         return true;
     }
-
-//    public int movementsPlayer() { // contagem de movimentos realizadas pelo jogador
-//        int sum = 0;
-//        if (currentPlayer == Color.WHITE) {
-//            List<Piece> boardWhite = piecesOnTheBoard.stream().filter(x -> ((ChessPiece) x).getColor() == Color.WHITE).collect(Collectors.toList());
-//            List<Piece> capturedWhite = capturedPieces.stream().filter(x -> ((ChessPiece) x).getColor() == Color.WHITE).collect(Collectors.toList());
-//            for (Piece p : boardWhite) {
-//                sum += ((ChessPiece) p).getMoveCount();
-//            }
-//            for (Piece p : capturedWhite) {
-//                sum += ((ChessPiece) p).getMoveCount();
-//            }
-//            return sum;
-//        } else {
-//            List<Piece> boardBlack = piecesOnTheBoard.stream().filter(x -> ((ChessPiece) x).getColor() == Color.BLACK).collect(Collectors.toList());
-//            List<Piece> capturedBlack = capturedPieces.stream().filter(x -> ((ChessPiece) x).getColor() == Color.BLACK).collect(Collectors.toList());
-//            for (Piece p : boardBlack) {
-//                sum += ((ChessPiece) p).getMoveCount();
-//            }
-//            for (Piece p : capturedBlack) {
-//                sum += ((ChessPiece) p).getMoveCount();
-//            }
-//            return sum;
-//        }
-//    }
-
+    
     public int movementsPiece(ChessPosition source) { //Movimentos realizado por uma peça
         Position pMove = source.toPosition();
         ChessPiece p = (ChessPiece) board.piece(pMove);
