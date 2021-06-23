@@ -31,6 +31,8 @@ public class Program {
                 UI.printBoard(chessMatch.getpieces(), possibleMoves);
 
                 System.out.println();
+                System.out.print("Movements made: "); // Mostra movimentos efetuados pela peça
+                System.out.println(chessMatch.movementsPiece(source));
                 System.out.print("Target: ");
                 ChessPosition target = UI.readChessPosition(sc);
 
