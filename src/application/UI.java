@@ -61,7 +61,7 @@ public class UI {
         System.out.println("Turn: " + chessMatch.getTurn());
         if (!chessMatch.getCheckMate()) {
             System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
-            System.out.println("Movements player: " + chessMatch.movementsPlayer());
+            //System.out.println("Moves made by the player: " + chessMatch.movementsPlayer()); // Mostra total de movimentos feito pelo jogador
             if (chessMatch.getCheck()) {
                 System.out.println("CHECK!!!");
             }

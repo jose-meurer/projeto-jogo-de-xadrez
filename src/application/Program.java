@@ -31,7 +31,7 @@ public class Program {
                 UI.printBoard(chessMatch.getpieces(), possibleMoves);
 
                 System.out.println();
-                System.out.print("Movements made: "); // Mostra movimentos efetuados pela peça
+                System.out.print("Moves made by the piece: "); // Mostra movimentos efetuados pela peça
                 System.out.println(chessMatch.movementsPiece(source));
                 System.out.print("Target: ");
                 ChessPosition target = UI.readChessPosition(sc);
@@ -40,6 +40,12 @@ public class Program {
 
                 if (capturedPiece != null) {
                     captured.add(capturedPiece);
+                }
+
+                if (chessMatch.getPromoted() != null) {
+                    System.out.print("Enter piece for promotion (B/N/R/Q): ");
+                    String type = sc.nextLine().toUpperCase();
+                    chessMatch.replacePromotedPiece(type);
                 }
             } catch (ChessException e) {
                 System.out.println(e.getMessage());
